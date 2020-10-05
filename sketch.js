@@ -34,8 +34,7 @@ function setup(){
     log2 = new Log (760,120,150,PI/7);
     log3 = new Log (870,120,150,-PI/7);
     bird = new Bird (100,200);
-    log4 = new Log(230,180,80,PI/2);
-    chain=new Chain(bird.body,log4.body);
+    chain=new Chain(bird.body,{x:200,y:100});
     
        
 }
@@ -55,7 +54,6 @@ function draw(){
     log2.display();
     log3.display();
     bird.display();
-    log4.display();
     ground.display();
     platform.display();
     chain.display();
@@ -63,3 +61,13 @@ function draw(){
 
     
 }
+
+function mouseDragged(){
+Matter.Body.setPosition(bird.body,{x:mouseX,y:mouseY})
+
+
+
+}
+function mouseReleased() {
+    chain.fly()
+  }
