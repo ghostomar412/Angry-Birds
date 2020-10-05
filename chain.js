@@ -18,11 +18,29 @@ class Chain{
         }
         display(){
             if (this.chain.bodyA){
-                line(this.chain.bodyA.position.x,this.chain.bodyA.position.y,this.pointB.x,this.pointB.y);
-                
+                if(this.chain.bodyA.position.x<200){
+                push();
+                strokeWeight(9);
+                stroke(85,40,15);
+                line(this.chain.bodyA.position.x-20,this.chain.bodyA.position.y,this.pointB.x+10,this.pointB.y-10);
+                line(this.chain.bodyA.position.x-20,this.chain.bodyA.position.y,this.pointB.x-30,this.pointB.y-10);
+                image(this.sling3,this.chain.bodyA.position.x-20,this.chain.bodyA.position.y-10,15,30)
+            pop();
+                }
+                else{
+                    push();
+                    strokeWeight(4);
+                    stroke(85,40,15);
+                    line(this.chain.bodyA.position.x+20,this.chain.bodyA.position.y,this.pointB.x+10,this.pointB.y-10);
+                    line(this.chain.bodyA.position.x+20,this.chain.bodyA.position.y,this.pointB.x-30,this.pointB.y-10);
+                    image(this.sling3,this.chain.bodyA.position.x+20,this.chain.bodyA.position.y-10,15,30)
+                pop();
+
+
+                }
             }
-            image(this.sling1,175,60)
-            image(this.sling2,147,50)
+            image(this.sling1,250,60)
+            image(this.sling2,222,50)
 
 
        }

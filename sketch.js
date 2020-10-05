@@ -33,8 +33,8 @@ function setup(){
     box5= new Box(810,160,70,70);
     log2 = new Log (760,120,150,PI/7);
     log3 = new Log (870,120,150,-PI/7);
-    bird = new Bird (100,200);
-    chain=new Chain(bird.body,{x:200,y:100});
+    bird = new Bird (175,200);
+    chain=new Chain(bird.body,{x:275,y:100});
     
        
 }
