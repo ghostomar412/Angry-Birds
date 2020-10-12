@@ -1,5 +1,5 @@
 class BASE {
-    constructor(x, y, width, height,angle) {
+    constructor(x, y, width, height, angle) {
       var options = {
           'restitution':0.8,
           'friction':1.4,

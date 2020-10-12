@@ -5,14 +5,17 @@ var log,log1,log2,log3,log4;
 
 var engine, world;
 var box1,box2,box3,box4,box5;
-var pig,pig1;
+var pig2,pig1;
 var bird;
 var bgImage;
 var platform;
 var chain;
+var intro;
+var outro;
 function preload(){
 bgImage=loadImage("sprites/bg.png");
-
+intro = loadSound("sprites/birds_intro.mp3");
+outro = loadSound("sprites/birds_outro.mp3");
 
 }
 function setup(){
@@ -23,7 +26,7 @@ function setup(){
     box2 = new Box(920,320,70,70);
     platform = new Ground(150,330,300,150);
     ground = new Ground(600,height,1200,20)
-    pig=new Pig(810,320)
+    pig2=new Pig(810,320)
     log=new Log(810,270,299,PI/2)
     box3 = new Box(700,250,70,70);
     
@@ -44,7 +47,7 @@ function draw(){
     Engine.update(engine);
     box1.display();
     box2.display();
-    pig.display();
+    pig2.display();
     log.display();
     log1.display();
     pig1.display();
@@ -71,3 +74,13 @@ Matter.Body.setPosition(bird.body,{x:mouseX,y:mouseY})
 function mouseReleased() {
     chain.fly()
   }
+function keyPressed(){
+if(keyCode===32){
+ chain.attach(bird.body)
+ 
+}
+
+
+
+
+}
