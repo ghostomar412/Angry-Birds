@@ -6,8 +6,8 @@ constructor(x,y){
 }
 display(){
  
-   console.log(this.body.speed);
-   if(this.body.speed < 3){
+ //  console.log(this.body.speed);
+   if(this.body.speed < 2.3){
       super.display();
    }
    else{

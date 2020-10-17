@@ -18,7 +18,7 @@ class Chain{
      }
         display(){
             if (this.chain.bodyA){   
-                 intro.play();
+                 intro.stop();
                 if(this.chain.bodyA.position.x<200){
                 push();
                 strokeWeight(9);
@@ -47,7 +47,7 @@ class Chain{
        }
  fly(){
     this.chain.bodyA=null;
-
+intro.stop();
 
 
 }
